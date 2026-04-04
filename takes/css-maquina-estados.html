@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CSS como Máquina de Estados | Still Don't Know</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Nota o ../ para encontrar o CSS na pasta acima -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON (Data URI for Computer Emoji) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    <!-- SOCIAL MEDIA META TAGS -->
+    <meta property="og:title" content="CSS como Máquina de Estados | Still Don't Know">
+    <meta property="og:description" content="Is CSS just for styling or is it an actual state machine?">
+  </head>
+  <body>
+    <!-- TOP SECTION: HEADER & NAVBAR -->
+    <header>
+      <nav>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <div class="menu">
+          <a href="../index.html">inicio</a>
+          <a href="../takes.html" class="active">pensamentos</a>
+          <a href="../contacts.html">contactos</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <span class="date">[2026-04-04]</span>
+      <h1>CSS é uma máquina de estados?</h1>
+      
+      <p>Muitas pessoas olham para o CSS apenas como uma forma de "pintar" o HTML. Mas quando começas a olhar para as pseudo-classes como <code>:hover</code>, <code>:active</code>, ou <code>:focus-within</code>, percebes que <mark>estás</mark> a definir transições entre estados de um sistema visual.</p>
+      
+      <p>Em Ciência de Computadores, estudamos Autómatos Finitos. Um botão no teu site é um pequeno autómato: tem o estado <i>Idle</i>, o estado <i>Hover</i> e o estado <i>Pressed</i>. O CSS é a linguagem que descreve como o sistema se comporta em cada um desses estados.</p>
+
+      <p>Pensar desta forma torna o debug de estilos muito mais lógico. Se algo está mal, não é apenas um "erro de cor", é um erro de transição de estado.</p>
+      
+      <p>Mudar a minha mente? <code>Error: Void</code>.</p>
+      
+      <p style="margin-top: 50px;"><a href="../takes.html">&larr; voltar para a lista</a></p>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+      <span><b>autor:</b> artur vicente cruz</span>
+      <span><b>email:</b> arturvicentecruz . ARROBA . proton . PONTO . me</span>
+    </footer>
+  </body>
+</html>

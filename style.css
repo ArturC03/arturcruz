@@ -1,0 +1,246 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* VARS */
+:root {
+  --bg-color: WhiteSmoke;
+  --main-text: Black;
+  --muted-text: DimGray;
+  --accent-color: OrangeRed;
+  --error-color: FireBrick;
+  --error-bg: MistyRose;
+  --border-subtle: Gainsboro;
+  --highlight-color: DodgerBlue;
+  --mark-text: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: Black;
+    --main-text: WhiteSmoke;
+    --muted-text: Silver;
+    --accent-color: Tomato;
+    --error-color: IndianRed;
+    --error-bg: Black;
+    --border-subtle: DimGray;
+    --highlight-color: MidnightBlue;
+    --mark-text: inherit;
+  }
+}
+
+/* BODY */
+body {
+  font-family: "IBM Plex Mono", monospace;
+  max-width: 750px; /* Reduzi um pouco para ser mais focado */
+  margin: 0 auto;
+  padding: 0 40px;
+  background-color: var(--bg-color);
+  color: var(--main-text);
+  line-height: 1.7;
+  letter-spacing: -0.01em; /* Toque profissional em fontes mono */
+}
+
+/* LINKS (Global Style) */
+a {
+  color: var(--muted-text);
+  text-decoration: none;
+  border-bottom: 1.5px solid transparent;
+  transition: all 0.2s ease;
+}
+
+a:hover, a.active {
+  color: var(--main-text);
+  border-bottom: 1.5px solid var(--accent-color);
+}
+
+a.active {
+  font-weight: bold;
+}
+
+/* HEADER & NAV */
+header {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+  text-transform: lowercase;
+}
+
+.menu {
+  display: flex;
+  gap: 30px; /* Reduzi para ser mais compacto */
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--muted-text);
+  padding: 10px;
+}
+
+/* MAIN */
+main {
+  margin-top: 40px;
+  min-height: 40dvh;
+}
+
+main p {
+  text-align: left;
+}
+
+mark {
+  /* Reset de estilos padrão */
+  background: none;
+  color: inherit;
+  padding: 0;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  /* Estilo "Fita-Cola" com Alinhamento Vertical */
+  display: inline-flex;    /* Flexbox mantém o texto no centro real */
+  align-items: center;     /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  position: relative;
+  
+  /* Ajuste de Espaçamento */
+  padding: 0.2em 0.6em;        /* Aumentei ligeiramente para não sufocar o texto */
+  margin: 0 0.1em;
+  height: 1.3em;           /* Altura fixa relativa à fonte para garantir o centro */
+  line-height: 1;          /* Remove interferências de entrelinha do parágrafo */
+  
+  /* Cores e Tipografia */
+  background-color: var(--highlight-color);
+  color: var(--mark-text);
+  font-weight: 700;
+
+  /* --- Rasgo de Fita-Cola Sutil --- */
+  clip-path: polygon(
+    0% 4%, 50% 1%, 100% 4%, 
+    99% 10%, 100% 18%, 98% 24%, 99% 32%, 98% 40%, 100% 48%, 98% 55%, 99% 65%, 98% 75%, 100% 85%, 98% 94%,
+    100% 96%, 50% 99%, 0% 96%,
+    1% 92%, 0% 84%, 2% 76%, 1% 68%, 2% 58%, 0% 48%, 1% 38%, 0% 28%, 1% 18%, 0% 8%
+  );
+}
+
+/* CLASSES */
+.error-text {
+  color: var(--error-color);
+  font-weight: bold;
+  background-color: var(--error-bg);
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+/* LISTS (Terminal Style) */
+ul {
+  list-style-type: "> ";
+  padding-left: 15px;
+  margin: 30px 0;
+}
+
+ul li {
+  margin-bottom: 12px;
+  padding-left: 8px;
+}
+
+/* TAKES / THOUGHTS FEED */
+.takes-list {
+  margin-top: 50px;
+}
+
+.take-entry {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 35px;
+  align-items: flex-start;
+}
+
+.date {
+  font-weight: bold;
+  color: var(--accent-color);
+  white-space: nowrap;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.take-content p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+  padding: 30px 0;
+  border-top: 1px solid var(--border-subtle);
+  text-transform: lowercase;
+  opacity: 0.5;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+footer b {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0 25px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 30px 0;
+  }
+
+  .menu-icon {
+    display: block;
+    margin-right: -10px; /* Alinhar com o padding do body */
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.25s ease;
+    pointer-events: none;
+  }
+
+  #menu-toggle:checked ~ .menu {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 15px;
+    pointer-events: auto;
+  }
+
+  .take-entry {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    margin-top: 60px;
+  }
+}
