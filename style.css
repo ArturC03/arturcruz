@@ -117,7 +117,6 @@ mark {
   background-color: var(--highlight-color);
   color: var(--mark-text);
   font-weight: 700;
-
   /* --- Rasgo de Fita-Cola Sutil --- */
   clip-path: polygon(
     0% 4%, 50% 1%, 100% 4%, 
@@ -185,7 +184,7 @@ footer {
   opacity: 0.5;
   font-size: 0.75rem;
   letter-spacing: 0.05em;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Fira Code", monospace;
 }
 
 footer b {
@@ -241,3 +240,4 @@ footer b {
     margin-top: 60px;
   }
 }
+
