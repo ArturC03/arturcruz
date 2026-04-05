@@ -1,77 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Contactos | Still Don't Know</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="style.css" />
-		<meta charset="UTF-8" />
-		<meta name="description" content="personal website - contacts" />
-		<meta name="author" content="Artur Cruz" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- FAVICON (Data URI for Mail Emoji) -->
-		<link
-			rel="icon"
-			href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✉️</text></svg>"
-		/>
-		<!-- SOCIAL MEDIA META TAGS -->
-		<meta property="og:title" content="Contactos | Still Don't Know" />
-		<meta
-			property="og:description"
-			content="Reach out to me on GitHub or Email."
-		/>
-	</head>
-	<body>
-		<!-- TOP SECTION: HEADER & NAVBAR -->
-		<header>
-			<nav>
-				<input type="checkbox" id="menu-toggle" />
-				<label for="menu-toggle" class="menu-icon">&#9776;</label>
-				<div class="menu">
-					<a href="index.html">inicio</a>
-					<a href="takes.html">pensamentos</a>
-					<a href="contacts.html" class="active">contactos</a>
-					<a href="logs.html">logs</a>
-				</div>
-			</nav>
-		</header>
+  <head>
+    <title>Contactos | Still Don't Know</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="description" content="personal website - contacts" />
+    <meta name="author" content="Artur Cruz" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FAVICON (Data URI for Mail Emoji) -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✉️</text></svg>"
+    />
+    <!-- SOCIAL MEDIA META TAGS -->
+    <meta property="og:title" content="Contactos | Still Don't Know" />
+    <meta
+      property="og:description"
+      content="Reach out to me on GitHub or Email."
+    />
+  </head>
+  <body>
+    <!-- TOP SECTION: HEADER & NAVBAR -->
+    <header>
+      <nav>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <div class="menu">
+          <a href="index.html">inicio</a>
+          <a href="takes.html">pensamentos</a>
+          <a href="contacts.html" class="active">contactos</a>
+          <a href="logs.html">logs</a>
+        </div>
+      </nav>
+    </header>
 
-		<main>
-			<p>Podes encontrar-me aqui:</p>
+    <main>
+      <p>Podes encontrar-me aqui:</p>
 
-			<ul class="contact-list">
-				<li>
-					<a href="https://github.com/ArturC03" target="_blank"
-						>github</a
-					>
-				</li>
-				<li><a href="#" id="email-link">email</a></li>
-			</ul>
-		</main>
+      <ul class="contact-list">
+        <li>
+          <a href="https://github.com/ArturC03" target="_blank"
+            >github</a
+          >
+        </li>
+        <li><a href="#" id="email-link">email</a></li>
+      </ul>
+    </main>
 
-		<!-- FOOTER SECTION -->
-		<footer>
-			<span><strong>autor:</b> artur vicente cruz</span>
-			<span
-				><strong>email:</b> <strong>$autor</b> . \ARROBA . proton . \PONTO .
-				me</span
-			>
-		</footer>
+    <!-- FOOTER SECTION -->
+    <footer>
+      <span><strong>autor:</strong> artur vicente cruz</span>
+      <span
+        ><strong>email:</strong> <strong>$autor</strong> . \ARROBA . proton . \PONTO .
+        me</span
+      >
+    </footer>
 
-		<script>
-			// Esconder o email de bots de scraping
-			document
-				.getElementById("email-link")
-				.addEventListener("click", function (e) {
-					e.preventDefault();
-					const u = "arturvicentecruz";
-					const d = "proton.me";
-					window.location.href = "mailto:" + u + "@" + d;
-				});
-		</script>
-	</body>
+    <script>
+      // Hide email from scraping bots
+      document
+        .getElementById("email-link")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          const u = "arturvicentecruz";
+          const d = "proton.me";
+          window.location.href = "mailto:" + u + "@" + d;
+        });
+    </script>
+  </body>
 </html>

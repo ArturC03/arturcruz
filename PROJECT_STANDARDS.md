@@ -61,7 +61,7 @@ O site é composto por várias páginas que servem propósitos distintos, focand
 ### CSS
 
 *   **Variáveis CSS:** Amplamente utilizar variables (`--var-name`) para cores, tipografia, espaçamentos e outros valores reutilizáveis. Isto é crucial para a manutenção e a alternância entre temas (claro/escuro).
-*   **Novas Variáveis para Logs:** Introduzidas variáveis para cores de status de logs: `--log-info-color`, `--log-debug-color`, `--log-warn-color`, `--log-fatal-color`.
+*   **Novas Variáveis para Logs:** Introduzidas variáveis para cores de status de logs: `--log-info-color`, `--log-debug-color`, `--log-warn-color`, `--log-error-color`, `--log-fatal-color`.
 *   **Comentários:**
     *   Agrupar estilos em secções lógicas com comentários de nível superior (ex: `/* HEADER & NAV */`, `/* LOGS PAGE STYLES */`).
     *   Adicionar comentários concisos para explicar decisões de design específicas, hacks ou partes de código não óbvias.
@@ -84,6 +84,7 @@ O site é composto por várias páginas que servem propósitos distintos, focand
 **Regras Adicionais e Restrições:**
 *   O site deve manter-se simples e conciso.
 *   Apenas cores CSS padrão são utilizadas (ex: `Black`, `FireBrick`).
+*   Todos os comentários devem ser escritos em inglês.
 
 ---
 
