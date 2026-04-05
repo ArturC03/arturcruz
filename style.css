@@ -9,6 +9,12 @@
   --border-subtle: Gainsboro;
   --highlight-color: DodgerBlue;
   --mark-text: inherit;
+  /* Log Status Colors */
+  --log-info-color: MediumSeaGreen;
+  --log-debug-color: SteelBlue;
+  --log-warn-color: Gold;
+  --log-error-color: FireBrick;
+  --log-fatal-color: Crimson;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -103,7 +109,7 @@ mark {
 
   /* Estilo "Fita-Cola" com Alinhamento Vertical */
   display: inline-flex;    /* Flexbox mantém o texto no centro real */
-  align-items: center;     /* Centraliza verticalmente */
+  align-items: center;      /* Centraliza verticalmente */
   justify-content: center; /* Centraliza horizontalmente */
   position: relative;
   
@@ -187,7 +193,7 @@ footer {
   font-family: "Fira Code", monospace;
 }
 
-footer b {
+footer strong {
   color: var(--accent-color);
   font-weight: 600;
 }
@@ -241,3 +247,87 @@ footer b {
   }
 }
 
+/* LOGS PAGE STYLES */
+.logs-list {
+  margin-top: 50px; 
+}
+
+.log-entry {
+  display: flex;
+  flex-direction: column; 
+  gap: 10px; 
+  margin-bottom: 35px; 
+  padding-bottom: 20px; 
+  border-bottom: 1px solid var(--border-subtle); 
+}
+
+.log-entry:last-child {
+  border-bottom: 0;
+}
+
+.log-metadata-line {
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: center;
+  gap: 15px; 
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.log-status {
+  font-weight: bold;
+  padding: 3px 8px;
+  text-transform: uppercase;
+  min-width: 60px; 
+  text-align: center;
+}
+
+.log-status.debug { background-color: var(--log-debug-color); color: var(--bg-color); }
+.log-status.info    { background-color: var(--log-info-color); color: var(--bg-color); }
+.log-status.warn    { background-color: var(--log-warn-color); color: var(--main-text); }
+.log-status.error   { background-color: var(--log-error-color); color: var(--bg-color); }
+.log-status.fatal   { background-color: var(--log-fatal-color); color: var(--bg-color); }
+
+.log-date {
+  color: var(--muted-text);
+  font-weight: bold;
+}
+
+.log-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-left: auto; 
+}
+
+.log-tag {
+  background-color: var(--border-subtle); 
+  color: var(--main-text);
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  text-transform: lowercase;
+}
+
+.log-title {
+  margin: 5px 0 0 0;
+  font-size: 1.1rem;
+  font-weight: normal; 
+}
+
+/* INDIVIDUAL LOG DETAIL */
+.log-header-detail {
+  margin-bottom: 30px;
+}
+
+.log-header-detail .log-title {
+  font-size: 1.8rem;
+  margin-top: 15px;
+}
+
+.log-content {
+  margin-top: 30px;
+}
+
+.log-content p {
+  margin-bottom: 20px;
+}

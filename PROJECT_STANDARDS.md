@@ -40,6 +40,12 @@ O site é composto por várias páginas que servem propósitos distintos, focand
 *   **Propósito:** Fornecer informações de contacto e/ou formas de entrar em contacto com o autor.
 *   **Conteúdo Inferido:** Deverá conter detalhes de contacto, possivelmente links para redes sociais ou um formulário de contacto, com base na convenção de nomes e na navegação.
 
+### `logs.html` (Página de Logs da Vida)
+
+*   **Propósito:** Atua como índice para registos de eventos marcantes da vida do autor, tanto positivos quanto negativos. Serve como um diário mais cru e completo, distinto da página de projetos.
+*   **Estrutura de Entradas:** Cada entrada de log segue um padrão de "STATUS [DATA] Título do Log", com tags associadas para categorização (ex: "academico", "profissional", "pessoal").
+*   **Navegação:** Cada entrada na página `logs.html` linka para uma página detalhada individual para cada log.
+
 ## Padrões de Codificação
 
 ### HTML Semântico e Acessível
@@ -47,21 +53,22 @@ O site é composto por várias páginas que servem propósitos distintos, focand
 *   **Estrutura:** Utilizar tags HTML semânticas (`<header>`, `<nav>`, `<main>`, `<footer>`, `<article>`, `<section>`, etc.) para definir a estrutura do conteúdo. Isso melhora a SEO e a acessibilidade.
 *   **Acessibilidade (A11y):**
     *   Todos os elementos `<img>` devem ter um atributo `alt` descritivo.
-    *   Manter uma hierarquia de cabeçalhos (`<h1>` a `<h6>`) lógica e correta.
+    *   **Cabeçalhos (`<h1>`-`<h6>`):** Manter uma hierarquia de cabeçalhos lógica e correta. No entanto, para páginas com conteúdo extremamente conciso e direto (como a homepage ou páginas de contacto), onde um cabeçalho pode não ser estritamente necessário para a clareza ou para evitar redundância, a sua omissão pode ser considerada para manter a simplicidade, desde que a semântica geral e a acessibilidade sejam preservadas.
     *   Utilizar atributos `aria-*` apenas quando estritamente necessário para melhorar a experiência de utilizadores com tecnologias assistivas, mantendo a simplicidade.
 *   **Base:** Incluir sempre `<!DOCTYPE html>` e as meta tags essenciais (`<meta charset="UTF-8">`, `<meta name="viewport" content="width=device-width, initial-scale=1.0">`).
-*   **Títulos de Página (`<title>`):** Cada página deve ter um atributo `<title>` claro e descritivo que reflita o seu conteúdo (ex: "Still Don't Know", "CSS como Máquina de Estados | Still Don't Know").
+*   **Títulos de Página (`<title>`):** Cada página deve ter um atributo `<title>` claro e descritivo que reflita o seu conteúdo (ex: "Still Don't Know", "CSS como Máquina de Estados | Still Don't Know", "Logs da Vida | Still Don't Know").
 
 ### CSS
 
 *   **Variáveis CSS:** Amplamente utilizar variables (`--var-name`) para cores, tipografia, espaçamentos e outros valores reutilizáveis. Isto é crucial para a manutenção e a alternância entre temas (claro/escuro).
+*   **Novas Variáveis para Logs:** Introduzidas variáveis para cores de status de logs: `--log-info-color`, `--log-debug-color`, `--log-warn-color`, `--log-fatal-color`.
 *   **Comentários:**
-    *   Agrupar estilos em secções lógicas com comentários de nível superior (ex: `/* HEADER & NAV */`).
+    *   Agrupar estilos em secções lógicas com comentários de nível superior (ex: `/* HEADER & NAV */`, `/* LOGS PAGE STYLES */`).
     *   Adicionar comentários concisos para explicar decisões de design específicas, hacks ou partes de código não óbvias.
 *   **Formatação e Estilo:**
     *   **Indentação:** Preferencialmente 2 espaços.
     *   **Espaçamento:** Usar uma linha em branco entre blocos de regras (seletores) para separar secções lógicas de estilo, melhorando a legibilidade.
-    *   **Nomenclatura:** Usar `kebab-case` para nomes de classes e IDs (ex: `main-text`, `take-entry`).
+    *   **Nomenclatura:** Usar `kebab-case` para nomes de classes e IDs (ex: `main-text`, `take-entry`, `log-entry`, `log-status`).
     *   **Unidades:** Usar unidades relativas (`em`, `rem`, `%`, `vh`, `vw`) onde apropriado para escalabilidade e acessibilidade, e `px` para definições precisas quando necessário.
 *   **Tipografia:** Utilizar `"Fira Code", monospace;` como a fonte principal para todo o texto. Ajustar `line-height` e `letter-spacing` para maximizar a legibilidade.
 *   **Design Responsivo:** Utilizar `media queries` de forma eficaz para garantir uma experiência fluida em todos os dispositivos.
@@ -69,7 +76,7 @@ O site é composto por várias páginas que servem propósitos distintos, focand
 
 ### Nomenclatura de Ficheiros e Organização
 
-*   **Nomes de Ficheiros:** Utilizar `kebab-case` para todos os ficheiros (ex: `index.html`, `style.css`, `contacts.html`).
+*   **Nomes de Ficheiros:** Utilizar `kebab-case` para todos os ficheiros (ex: `index.html`, `style.css`, `contacts.html`, `logs.html`).
 *   **Organização:** Para um site pessoal simples, manter os ficheiros na raiz é ideal. Se o projeto crescer, considerar subpastas para `css/`, `js/` ou `assets/`, mas sempre priorizando a simplicidade.
 
 ---
