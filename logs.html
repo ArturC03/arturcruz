@@ -2,81 +2,115 @@
 <html>
 	<head>
 		<title>Logs | Still Don't Know</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="description" content="Personal life logs and events">
-    <meta name="author" content="Artur Cruz">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- FAVICON (Data URI for Log Emoji) -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪵</text></svg>">
-    <!-- SOCIAL MEDIA META TAGS -->
-    <meta property="og:title" content="Logs da Vida | Still Don't Know">
-    <meta property="og:description" content="A personal log of life events, both good and bad.">
-    <meta property="og:type" content="website">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<meta charset="UTF-8" />
+		<meta name="description" content="Personal life logs and events" />
+		<meta name="author" content="Artur Cruz" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- FAVICON (Data URI for Log Emoji) -->
+		<link
+			rel="icon"
+			href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪵</text></svg>"
+		/>
+		<!-- SOCIAL MEDIA META TAGS -->
+		<meta property="og:title" content="Logs da Vida | Still Don't Know" />
+		<meta
+			property="og:description"
+			content="A personal log of life events, both good and bad."
+		/>
+		<meta property="og:type" content="website" />
 	</head>
 	<body>
-    <!-- TOP SECTION: HEADER & NAVBAR -->
-    <header>
-      <nav>
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        <div class="menu">
-          <a href="index.html">inicio</a>
-          <a href="takes.html">pensamentos</a>
-          <a href="contacts.html">contactos</a>
-          <a href="logs.html" class="active">logs</a>
-        </div>
-      </nav>
-    </header>
+		<!-- TOP SECTION: HEADER & NAVBAR -->
+		<header>
+			<nav>
+				<input type="checkbox" id="menu-toggle" />
+				<label for="menu-toggle" class="menu-icon">&#9776;</label>
+				<div class="menu">
+					<a href="index.html">inicio</a>
+					<a href="takes.html">pensamentos</a>
+					<a href="contacts.html">contactos</a>
+					<a href="logs.html" class="active">logs</a>
+				</div>
+			</nav>
+		</header>
 
-    <main>
-        <h1>Logs</h1>
-        <p>Um registo de eventos marcantes, tanto bons quanto maus, que moldam o meu caminho.</p>
+		<main>
+			<h1>Logs</h1>
+			<p>
+				Um registo de eventos marcantes, tanto bons quanto maus, que
+				moldam o meu caminho.
+			</p>
 
-        <section class="logs-list">
-            <article class="log-entry">
-                <div class="log-metadata-line">
-                    <span class="log-status warn">WARN</span>
-                    <span class="log-date">[2027-02-22]</span>
-                    <div class="log-tags">
-                        <span class="log-tag personal">Personal</span>
-                        <span class="log-tag academic">Academic</span>
-                    </div>
-                </div>
-                <h3 class="log-title"><a href="logs/log-entry-001.html">System Update Failed: Caffeine Depletion Critical</a></h3>
-            </article>
+			<section class="logs-list">
+				<article class="log-entry">
+					<div class="log-metadata-line">
+						<span class="log-status warn">WARN</span>
+						<span class="date">[2027-02-22]</span>
+            <span class="spacer"></span>
+						<div class="log-tags">
+							<span class="log-tag personal">Personal</span>
+							<span class="log-tag academic">Academic</span>
+						</div>
+					</div>
+					<h3 class="log-title">
+						<a href="logs/log-entry-001.html"
+							>System Update Failed: Caffeine Depletion
+							Critical</a
+						>
+					</h3>
+				</article>
 
-            <article class="log-entry">
-                <div class="log-metadata-line">
-                    <span class="log-status info">INFO</span>
-                    <span class="log-date">[2027-01-15]</span>
-                    <div class="log-tags">
-                        <span class="log-tag professional">Professional</span>
-                    </div>
-                </div>
-                <h3 class="log-title"><a href="logs/log-entry-002.html">Codebase Refactoring Complete: Minimalist Approach Adopted</a></h3>
-            </article>
+				<article class="log-entry">
+					<div class="log-metadata-line">
+						<span class="log-status info">INFO</span>
+						<span class="date">[2027-01-15]</span>
+            <span class="spacer"></span>
+						<div class="log-tags">
+							<span class="log-tag professional"
+								>Professional</span
+							>
+						</div>
+					</div>
+					<h3 class="log-title">
+						<a href="logs/log-entry-002.html"
+							>Codebase Refactoring Complete: Minimalist Approach
+							Adopted</a
+						>
+					</h3>
+				</article>
 
-            <article class="log-entry">
-                <div class="log-metadata-line">
-                    <span class="log-status error">ERROR</span>
-                    <span class="log-date">[2026-12-01]</span>
-                    <div class="log-tags">
-                        <span class="log-tag personal">Personal</span>
-                        <span class="log-tag challenge">Challenge</span>
-                    </div>
-                </div>
-                <h3 class="log-title"><a href="logs/log-entry-003.html">Unexpected Setback: Project Deadline Missed</a></h3>
-            </article>
-        </section>
-    </main>
+				<article class="log-entry">
+					<div class="log-metadata-line">
+						<span class="log-status error">ERROR</span>
+						<span class="date">[2026-12-01]</span>
+            <span class="spacer"></span>
+						<div class="log-tags">
+							<span class="log-tag personal">Personal</span>
+							<span class="log-tag challenge">Challenge</span>
+						</div>
+					</div>
+					<h3 class="log-title">
+						<a href="logs/log-entry-003.html"
+							>Unexpected Setback: Project Deadline Missed</a
+						>
+					</h3>
+				</article>
+			</section>
+		</main>
 
-    <footer>
-      <span><strong>autor:</strong> artur vicente cruz</span>
-      <span><strong>email:</strong> <strong>$autor</strong> . \ARROBA . proton . \PONTO . me</span>
-    </footer>
-</body>
+		<footer>
+			<span><strong>autor:</strong> artur vicente cruz</span>
+			<span
+				><strong>email:</strong> <strong>$autor</strong> . \ARROBA .
+				proton . \PONTO . me</span
+			>
+		</footer>
+	</body>
 </html>
