@@ -9,6 +9,8 @@
   --border-subtle: Gainsboro;
   --highlight-color: DodgerBlue;
   --mark-text: inherit;
+  --quote-bg: #F0F0F0;
+
   /* Log Status Colors */
   --log-info-color: MediumSeaGreen;
   --log-debug-color: SteelBlue;
@@ -28,6 +30,7 @@
     --border-subtle: DimGray;
     --highlight-color: MidnightBlue;
     --mark-text: inherit;
+    --quote-bg: Black;
   }
 }
 
@@ -124,6 +127,7 @@ mark {
   background-color: var(--highlight-color);
   color: var(--mark-text);
   font-weight: 700;
+
   /* --- Subtle Tape Rip Effect --- */
   clip-path: polygon(
     0% 4%,
@@ -246,7 +250,6 @@ footer strong {
     flex-direction: column;
     align-items: flex-end;
     gap: 12px;
-
     max-height: 0;
     opacity: 0;
     overflow: hidden;
@@ -313,24 +316,28 @@ footer strong {
   background-color: var(--log-debug-color);
   color: var(--bg-color);
 }
+
 .log-status.info {
   background-color: var(--log-info-color);
   color: var(--bg-color);
 }
+
 .log-status.warn {
   background-color: var(--log-warn-color);
   color: var(--main-text);
 }
+
 .log-status.error {
   background-color: var(--log-error-color);
   color: var(--bg-color);
 }
+
 .log-status.fatal {
   background-color: var(--log-fatal-color);
   color: var(--bg-color);
 }
 
-date.log-tags {
+.log-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -373,7 +380,7 @@ blockquote {
   margin: 30px 0;
   padding: 10px 25px;
   border-left: 4px solid var(--accent-color);
-  background-color: rgba(128, 128, 128, 0.05); /* Um brilho sutil */
+  background-color: var(--quote-bg);
   font-style: italic;
   color: var(--muted-text);
 }
@@ -382,7 +389,7 @@ blockquote p {
   margin: 0;
 }
 
-/* Opcional: Adiciona um símbolo de citação automático */
+/* Automatic quotation symbol */
 blockquote::before {
   content: "/*";
   display: block;
