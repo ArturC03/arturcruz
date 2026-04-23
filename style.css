@@ -9,7 +9,7 @@
   --border-subtle: Gainsboro;
   --highlight-color: DodgerBlue;
   --mark-text: inherit;
-  --quote-bg: #F0F0F0;
+  --quote-bg: Gainsboro;
 
   /* Log Status Colors */
   --log-info-color: MediumSeaGreen;
@@ -17,6 +17,9 @@
   --log-warn-color: Gold;
   --log-error-color: FireBrick;
   --log-fatal-color: Crimson;
+
+  /* Terminal Grid (Subtle Mesh) */
+  --grid-line-color: rgba(0, 0, 0, 0.03);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,19 +34,58 @@
     --highlight-color: MidnightBlue;
     --mark-text: inherit;
     --quote-bg: Black;
+
+    /* Terminal Grid Dark Mode */
+    --grid-line-color: rgba(255, 255, 255, 0.05);
   }
 }
 
-/* BODY */
+/* GLOBAL & POLISH */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-color);
+  background-image: 
+    radial-gradient(circle, var(--grid-line-color) 1.5px, transparent 1.5px),
+    linear-gradient(var(--grid-line-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line-color) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+::selection {
+  background-color: var(--highlight-color);
+  color: var(--mark-text);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-text);
+}
+
 body {
   font-family: "Fira Code", monospace;
-  max-width: 750px; /* Reduced slightly for focus */
+  max-width: 750px;
   margin: 0 auto;
   padding: 0 40px;
-  background-color: var(--bg-color);
+  background-color: transparent;
   color: var(--main-text);
   line-height: 1.7;
-  letter-spacing: -0.01em; /* Professional touch for mono fonts */
+  letter-spacing: -0.01em;
+  min-height: 100vh;
 }
 
 /* LINKS (Global Style) */
@@ -52,6 +94,11 @@ a {
   text-decoration: none;
   border-bottom: 1.5px solid transparent;
   transition: all 0.2s ease;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 4px;
 }
 
 a:hover,
